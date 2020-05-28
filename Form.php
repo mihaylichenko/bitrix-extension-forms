@@ -48,7 +48,7 @@ class Form
      * Form constructor.
      * @param Component $component
      */
-    public function __construct(Msvdev\Bitrix\Component $component)
+    public function __construct(Msvdev\Bitrix\Component\Component $component)
     {
         $this->component = $component;
         $this->initFormComponent();
