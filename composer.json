@@ -1,0 +1,27 @@
+{
+  "name": "msvdev/bitrix-extension-forms",
+  "description": "Bitrix symfony  forms",
+  "keywords": ["bitrix", "symfony", "helper", "forms", "validation"],
+  "type": "bitrix-extension",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sergey Mihaylichenko",
+      "email": "senya_m@bk.ru",
+      "homepage": "https://github.com/mihaylichenko/"
+    }
+  ],
+  "require": {
+    "symfony/templating": "^3.4",
+    "symfony/finder": "^4.1",
+    "symfony/form": "^3.4",
+    "symfony/validator": "^3.4",
+    "msvdev/bitrix-extension-component": "^1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Msvdev\\Bitrix\\Forms\\": ""
+    }
+  }
+}
