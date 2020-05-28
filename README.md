@@ -2,7 +2,7 @@
 
 Установка <code>composer require msvdev/bitrix-extension-forms</code>
 
-##Пример
+## Пример
 ```php
 
 <?php
@@ -27,8 +27,7 @@ class Component extends \Msvdev\Bitrix\Component\Component
             $APPLICATION->RestartBuffer();
             $result = [
                 'result' => false,
-                'errors' => [],
-                'redirectUrl' => null
+                'errors' => [],                
             ];
             if($form->isValid()){
                 $entity->auth();
