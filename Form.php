@@ -15,7 +15,6 @@ use Symfony\Component\Translation\Loader\XliffFileLoader;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Msvdev\Bitrix\Component;
 
 class Form
 {
@@ -49,7 +48,7 @@ class Form
      * Form constructor.
      * @param Component $component
      */
-    public function __construct(Component $component)
+    public function __construct(Msvdev\Bitrix\Component $component)
     {
         $this->component = $component;
         $this->initFormComponent();
