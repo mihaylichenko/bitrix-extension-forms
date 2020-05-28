@@ -2,7 +2,7 @@
 namespace Msvdev\Bitrix\Forms;
 
 use Bitrix\Main\Localization\Loc;
-use CBitrixComponent;
+use Msvdev\Bitrix\Component\Component;
 use Symfony\Component\Form\Extension\Templating\TemplatingRendererEngine;
 use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
 use Symfony\Component\Form\FormErrorIterator;
@@ -20,7 +20,7 @@ class Form
 {
 
     /**
-     * @var CBitrixComponent
+     * @var Component
      */
     protected $component;
 
@@ -48,7 +48,7 @@ class Form
      * Form constructor.
      * @param Component $component
      */
-    public function __construct(Msvdev\Bitrix\Component\Component $component)
+    public function __construct(Component $component)
     {
         $this->component = $component;
         $this->initFormComponent();

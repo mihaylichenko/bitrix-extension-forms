@@ -1,4 +1,6 @@
 <?php
+namespace Msvdev\Bitrix\Forms;
+
 /*
  * This file is part of the Symfony package.
  *
@@ -7,7 +9,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Wn\Symfony\Forms;
+
 use Symfony\Component\Templating\Helper\Helper;
 use Symfony\Component\Form\FormRendererInterface;
 use Symfony\Component\Form\FormView;
