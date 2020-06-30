@@ -31,8 +31,7 @@ class Component extends \Msvdev\Bitrix\Component\Component
             ];
             if($form->isValid()){
                 $entity->auth();
-                $result['result'] = true;
-                die();
+                $result['result'] = true;                
             } else { // Get ajax errors
                 $result['errors'] = $symfonyForm->getErrorsArray($form->getErrors(true));
             }
