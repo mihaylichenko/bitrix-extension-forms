@@ -3,7 +3,7 @@
   "description": "Bitrix symfony  forms",
   "keywords": ["bitrix", "symfony", "helper", "forms", "validation"],
   "type": "bitrix-extension",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "authors": [
     {

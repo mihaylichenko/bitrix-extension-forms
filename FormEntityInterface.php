@@ -6,7 +6,7 @@ interface FormEntityInterface
 {
     public function save();
 
-    public function beforeSave();
+    public function beforeSave(&$arFields);
 
     public function afterSave();
 
