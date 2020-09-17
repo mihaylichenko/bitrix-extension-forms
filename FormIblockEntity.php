@@ -56,7 +56,7 @@ abstract class FormIblockEntity implements FormEntityInterface
             else{
                 $value = $this->$property;
             }
-            if($field == 'PREVIEW_TEXT' || $field == 'DETAIL_TEXT'){
+            if($field == 'PREVIEW_TEXT' || $field == 'DETAIL_TEXT' || $field == 'IBLOCK_SECTION_ID'){
                 $arFields[$field] = $value;
             } else {
                 $fields[$field] = $value;
