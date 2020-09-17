@@ -22,10 +22,9 @@ abstract class FormIblockEntity implements FormEntityInterface
 
     /**
      *  Before save event
-     * @param $arFields
      * @return bool
      */
-    public function beforeSave(&$arFields){
+    public function beforeSave(){
         return true;
     }
 
@@ -48,6 +47,9 @@ abstract class FormIblockEntity implements FormEntityInterface
             "IBLOCK_ID" => $this->getIblockId(),
             "NAME" => $this->getElementName()
         ];
+        if(!$this->beforeSave()){
+            return false;
+        }
         foreach ($this->fieldMapping() as $property => $field){
             $method = "get{$property}";
             if(method_exists($this,$method)){
@@ -56,16 +58,13 @@ abstract class FormIblockEntity implements FormEntityInterface
             else{
                 $value = $this->$property;
             }
-            if($field == 'PREVIEW_TEXT' || $field == 'DETAIL_TEXT'){
+            if($field == 'PREVIEW_TEXT' || $field == 'DETAIL_TEXT' || $field == 'IBLOCK_SECTION_ID'){
                 $arFields[$field] = $value;
             } else {
                 $fields[$field] = $value;
             }
         }
         $arFields['PROPERTY_VALUES'] = $fields;
-        if(!$this->beforeSave($arFields)){
-            return false;
-        }
         $oElement = new \CIBlockElement();
         $idElement = $oElement->Add($arFields, false, false, true);
         if($idElement){
